@@ -30,7 +30,7 @@ const CartItem = ({ item }) => {
             {/* REMOVE */}
             <div
               onClick={() => removeFromCart(id)}
-              className="text-xl cursor-pointer"
+              className="text-xl cursor-pointer h-full"
             >
               <IoMdClose className="text-gray-500 hover:text-red-500 transition" />
             </div>
