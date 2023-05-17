@@ -59,12 +59,15 @@ const CartItem = ({ item }) => {
             </div>
             {/* item price */}
             <div className="flex flex-1 items-center justify-around">
-              $ {price}
+              $ {price.toLocaleString("en")}
             </div>
             {/* final price */}
 
             <div className="flex-1 flex justify-end items-center text-primary font-medium">
-              {`$ ${parseFloat(price * amount).toFixed(2)}`}{" "}
+              {`$ ${
+                parseFloat(price * amount).toLocaleString("en")
+                //.toFixed(2) <--- float values this case no use for the COL money
+              }`}{" "}
             </div>
           </div>
         </div>

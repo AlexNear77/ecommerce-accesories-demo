@@ -3,9 +3,10 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 //import icons
 import { BsBag } from "react-icons/bs";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 // import logo
-import Logo from "../img/logo2.jpg";
+import Logo from "../img/logo22.png";
 
 const Header = () => {
   //Header state
@@ -30,19 +31,33 @@ const Header = () => {
     >
       <div className="container flex mx-auto items-center justify-between h-full">
         {/* Logo */}
-        <Link>
+        <Link to="/">
           <div>
             <img className="w-[40px]" src={Logo} alt="Mistic" />
           </div>
         </Link>
         {/* Cart */}
-        <div
-          className="cursor-pointer flex relative "
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <BsBag className="text-2xl" />
-          <div className="-right-2 -bottom-2 absolute bg-red-500 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
-            {itemAmount}{" "}
+        <div className="flex flex-row ">
+          <a
+            href="https://www.tiktok.com/"
+            className="mr-7 flex relative cursor-pointer"
+          >
+            <FaTiktok className="text-2xl" />
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            className="mr-7 flex relative cursor-pointer"
+          >
+            <FaInstagram className="text-2xl" />
+          </a>
+          <div
+            className="cursor-pointer flex relative "
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <BsBag className="text-2xl" />
+            <div className="-right-2 -bottom-2 absolute bg-red-500 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+              {itemAmount}
+            </div>
           </div>
         </div>
       </div>

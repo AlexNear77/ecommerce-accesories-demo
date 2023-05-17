@@ -11,7 +11,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart, total } = useContext(CartContext);
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext);
 
   return (
     <div
@@ -21,7 +21,7 @@ const Sidebar = () => {
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold">
-          Carrito de compras (0)
+          Carrito de compras ({itemAmount})
         </div>
         {/* icon */}
         <div
@@ -32,7 +32,7 @@ const Sidebar = () => {
         </div>
       </div>
       {/* MAP CARTS ITEMS */}
-      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[540px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[420px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -42,7 +42,11 @@ const Sidebar = () => {
         <div className=" flex w-full justify-between items-center">
           {/* total */}
           <div className="uppercase font-semibold">
-            <span className="mr-2">Total:</span>$ {parseFloat(total).toFixed(2)}
+            <span className="mr-2">Total:</span>${" "}
+            {
+              parseFloat(total).toLocaleString("en")
+              //.toFixed(2) <--- float values this case no use for the COL money
+            }
           </div>
           {/* clear cart icon */}
           <div

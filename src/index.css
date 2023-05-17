@@ -7,3 +7,8 @@
     @apply font-primary text-primary;
   }
 }
+
+@font-face {
+  font-family: "Ahsing-Regular";
+  src: url("../public/fonts/Ahsing-Regular.otf");
+}

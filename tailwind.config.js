@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: 'Poppins',
+      mistic: 'Ahsing-Regular' 
     },
     container: {
       padding: {
@@ -22,7 +23,7 @@ module.exports = {
         secondary: '#F5E6E0',
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')",
+        hero: "url('./img/tp206-17.jpg')",
       },
     },
   },
