@@ -39,13 +39,13 @@ const Header = () => {
         {/* Cart */}
         <div className="flex flex-row ">
           <a
-            href="https://www.tiktok.com/"
+            href="https://www.tiktok.com/@misticolom?_t=8cOXLzOXmyc&_r=1"
             className="mr-7 flex relative cursor-pointer"
           >
             <FaTiktok className="text-2xl" />
           </a>
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/mistic__col/"
             className="mr-7 flex relative cursor-pointer"
           >
             <FaInstagram className="text-2xl" />

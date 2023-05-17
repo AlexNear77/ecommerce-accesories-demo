@@ -14,17 +14,17 @@ const Hero = () => {
             <div className="w-10 h-[2px] bg-red-500 mr-3"></div>Lo más nuevo
           </div>
           {/* Title */}
-          <h1 className="text-[70px] leading-[1.1] font-mistic">
+          <h1 className="sm:text-[70px] text-[55px] leading-[1.1] font-mistic">
             MISTIC COL <br />
           </h1>
-          <span className="font-semibold text-[70px] leading-[1.1] mb-4">
+          <span className="font-semibold sm:text-[70px] text-[55px] leading-[1.1] mb-4">
             Accesorios
           </span>
           <Link
             className="self-start uppercase font-semibold border-b-2 border-primary"
             to={"/"}
           >
-            Descubre mas
+            Descubre más
           </Link>
         </div>
         {/* Image */}
